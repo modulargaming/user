@@ -1,4 +1,3 @@
-user
-====
+# [Modular Gaming User](http://www.modulargaming.com)
 
-Modular Gaming users module.
+A modular [persistent browser based game](http://www.pbbg.org) framework using [Kohana 3.3](https://github.com/kohana/core) with [ORM](https://github.com/kohana/orm) and [KOstache](https://github.com/zombor/KOstache).
