@@ -66,6 +66,8 @@ class MG_Model_User extends Model_Auth_User implements Model_ACL_User, Interface
 		'cached_properties'
 	);
 
+	protected $_cached_has = array();
+
 	public function rules()
 	{
 		return array(
@@ -116,6 +118,28 @@ class MG_Model_User extends Model_Auth_User implements Model_ACL_User, Interface
 		$user = ORM::factory('User', $id);
 
 		return $user->loaded();
+	}
+
+	public function has($alias, $far_keys = NULL, $cache = TRUE)
+	{
+
+		$tmp = ($far_keys ? $far_keys : 'default');
+
+		if ($cache AND isset($this->_cached_has[$alias]) AND isset($this->_cached_has[$alias][$tmp]))
+		{
+			return $this->_cached_has[$alias][$tmp];
+		}
+
+		if ( ! isset($this->_cached_has[$alias]))
+		{
+			$this->_cached_has[$alias] = array();
+		}
+
+		$has = parent::has($alias, $far_keys);
+
+		$this->_cached_has[$alias][$tmp] = $has;
+
+		return $has;
 	}
 
 	/**
