@@ -124,6 +124,10 @@ class MG_Model_User extends Model_Auth_User implements Model_ACL_User, Interface
 	{
 
 		$tmp = ($far_keys ? $far_keys : 'default');
+		if (is_object($tmp) AND $tmp instanceof ORM)
+		{
+			$tmp = $tmp->id;
+		}
 
 		if ($cache AND isset($this->_cached_has[$alias]) AND isset($this->_cached_has[$alias][$tmp]))
 		{
