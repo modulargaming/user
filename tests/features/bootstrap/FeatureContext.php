@@ -3,12 +3,9 @@
 use Behat\Behat\Context\Step;
 use Behat\Behat\Event\SuiteEvent;
 
-//
 // Require 3rd-party libraries here:
-//
-//   require_once 'PHPUnit/Autoload.php';
-//   require_once 'PHPUnit/Framework/Assert/Functions.php';
-//
+// require_once 'PHPUnit/Autoload.php';
+// require_once 'PHPUnit/Framework/Assert/Functions.php';
 
 require_once 'vendor/autoload.php';
 require 'kohana.php';
@@ -70,7 +67,7 @@ class FeatureContext extends Behat\MinkExtension\Context\MinkContext
 	public function iAmLoggedInAs($username)
 	{
 		return array(
-			new Step\Given('there is a user with username "' . $username . '" and password "password"'),
+			new Step\Given('there is a user with username "'.$username.'" and password "password"'),
 			new Step\When('I am on "user/login"'),
 			new Step\When('I fill in "username" with "'.$username.'"'),
 			new Step\When('I fill in "password" with "password"'),

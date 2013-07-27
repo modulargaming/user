@@ -5,7 +5,7 @@ class MG_Controller_Admin_User_Role extends Abstract_Controller_Admin {
 		public function action_index()
 		{
 
-			if (!$this->user->can('Admin_User_Role_Index'))
+			if ( ! $this->user->can('Admin_User_Role_Index'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin user role index');
 			}
@@ -18,9 +18,10 @@ class MG_Controller_Admin_User_Role extends Abstract_Controller_Admin {
 			$this->view->roles = $roles->as_array();
 		}
 
-		public function action_paginate() {
+		public function action_paginate()
+		{
 
-			if (!$this->user->can('Admin_User_Role_Paginate'))
+			if ( ! $this->user->can('Admin_User_Role_Paginate'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin user role paginate');
 			}
@@ -48,13 +49,15 @@ class MG_Controller_Admin_User_Role extends Abstract_Controller_Admin {
 				$datatables->render($this->response);
 			}
 			else
-				throw new HTTP_Exception_500();
+			{
+				throw HTTP_Exception::factory('500', 'Internal server error');
+			}
 		}
 
 		public function action_retrieve()
 		{
 
-			if (!$this->user->can('Admin_User_Role_Retrieve'))
+			if ( ! $this->user->can('Admin_User_Role_Retrieve'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin user role retrieve');
 			}
@@ -86,7 +89,7 @@ class MG_Controller_Admin_User_Role extends Abstract_Controller_Admin {
 		public function action_save()
 		{
 
-			if (!$this->user->can('Admin_User_Role_Save'))
+			if ( ! $this->user->can('Admin_User_Role_Save'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin user role save');
 			}
@@ -125,7 +128,7 @@ class MG_Controller_Admin_User_Role extends Abstract_Controller_Admin {
 
 				foreach ($list as $field => $er)
 				{
-					if (!is_array($er))
+					if ( ! is_array($er))
 					{
 						$er = array($er);
 					}
@@ -140,7 +143,7 @@ class MG_Controller_Admin_User_Role extends Abstract_Controller_Admin {
 		public function action_delete()
 		{
 
-			if (!$this->user->can('Admin_User_Role_Delete'))
+			if ( ! $this->user->can('Admin_User_Role_Delete'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin user role delete');
 			}

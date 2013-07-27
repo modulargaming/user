@@ -98,10 +98,7 @@ class MG_Avatar_Upload extends Avatar {
 	 */
 	private function save_image($image)
 	{
-		if (
-			! Upload::valid($image) OR
-			! Upload::not_empty($image) OR
-			! Upload::type($image, array('jpg', 'jpeg', 'png', 'gif')))
+		if ( ! Upload::valid($image) OR ! Upload::not_empty($image) OR ! Upload::type($image, array('jpg', 'jpeg', 'png', 'gif')))
 		{
 			return FALSE;
 		}
@@ -120,6 +117,8 @@ class MG_Avatar_Upload extends Avatar {
 
 			return TRUE;
 		}
+
+		return FALSE;
 	}
 
 }

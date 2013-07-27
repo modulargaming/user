@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') or die('No direct script access.');
+<?php defined('SYSPATH') OR die('No direct script access.');
 /**
  * Task to promote a user to admin
  *
@@ -30,7 +30,7 @@ class MG_Task_User_Promote extends Minion_Task
      protected $_options = array(
          'username' => NULL,
 	     'type' => 'id',
-	     'roles' => 2 //default to admin
+	     'roles' => 2 // default to admin
     );
 
 	/**

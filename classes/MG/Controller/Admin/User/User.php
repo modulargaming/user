@@ -5,7 +5,7 @@ class MG_Controller_Admin_User_User extends Controller_Admin_User {
 		public function action_index()
 		{
 
-			if (!$this->user->can('Admin_User_User_Index'))
+			if ( ! $this->user->can('Admin_User_User_Index'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin users user index');
 			}
@@ -22,9 +22,10 @@ class MG_Controller_Admin_User_User extends Controller_Admin_User {
 			$this->view->roles = $roles->as_array();
 		}
 
-		public function action_paginate() {
+		public function action_paginate()
+		{
 
-			if (!$this->user->can('Admin_User_User_Paginate'))
+			if ( ! $this->user->can('Admin_User_User_Paginate'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin users user paginate');
 			}
@@ -50,13 +51,15 @@ class MG_Controller_Admin_User_User extends Controller_Admin_User {
 				$datatables->render($this->response);
 			}
 			else
-				throw new HTTP_Exception_500();
+			{
+				throw HTTP_Exception::factory('500', 'Internal server error');
+			}
 		}
 
 		public function action_retrieve()
 		{
 
-			if (!$this->user->can('Admin_User_User_Retrieve'))
+			if ( ! $this->user->can('Admin_User_User_Retrieve'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin users user retrieve');
 			}
@@ -87,7 +90,7 @@ class MG_Controller_Admin_User_User extends Controller_Admin_User {
 		public function action_save()
 		{
 
-			if (!$this->user->can('Admin_User_User_Save'))
+			if ( ! $this->user->can('Admin_User_User_Save'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin users user save');
 			}
@@ -124,7 +127,7 @@ class MG_Controller_Admin_User_User extends Controller_Admin_User {
 
 				foreach ($list as $field => $er)
 				{
-					if (!is_array($er))
+					if ( ! is_array($er))
 					{
 						$er = array($er);
 					}
@@ -139,7 +142,7 @@ class MG_Controller_Admin_User_User extends Controller_Admin_User {
 		public function action_delete()
 		{
 
-			if (!$this->user->can('Admin_User_User_Delete'))
+			if ( ! $this->user->can('Admin_User_User_Delete'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin users user delete');
 			}
@@ -157,7 +160,7 @@ class MG_Controller_Admin_User_User extends Controller_Admin_User {
 		public function action_role_load()
 		{
 
-			if (!$this->user->can('Admin_User_User_Role_Load'))
+			if ( ! $this->user->can('Admin_User_User_Role_Load'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin users user role load');
 			}
@@ -179,7 +182,7 @@ class MG_Controller_Admin_User_User extends Controller_Admin_User {
 		public function action_role_delete()
 		{
 
-			if (!$this->user->can('Admin_User_User_Role_Delete'))
+			if ( ! $this->user->can('Admin_User_User_Role_Delete'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin users user role delete');
 			}
@@ -199,7 +202,7 @@ class MG_Controller_Admin_User_User extends Controller_Admin_User {
 		public function action_role_update()
 		{
 
-			if (!$this->user->can('Admin_User_User_Role_Update'))
+			if ( ! $this->user->can('Admin_User_User_Role_Update'))
 			{
 				throw HTTP_Exception::factory('403', 'Permission denied to view admin users user role update');
 			}
@@ -209,7 +212,7 @@ class MG_Controller_Admin_User_User extends Controller_Admin_User {
 			$role = $this->request->post('role_id');
 			$r = ORM::factory('Role', $role);
 
-			//save role
+			// Save role
 			$user->add('roles', $r);
 
 			$this->response->headers('Content-Type', 'application/json');
