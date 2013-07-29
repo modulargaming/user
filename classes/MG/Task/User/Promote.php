@@ -22,8 +22,8 @@
  * @package    MG/User
  * @category   Task
  * @author     Kohana Team
- * @copyright  (c) 2009-2011 Kohana Team
- * @license    http://kohanaframework.org/license
+ * @copyright  (c) 2009-2013 Kohana Team
+ * @license    http://www.kohanaframework.org/license
  */
 class MG_Task_User_Promote extends Minion_Task
 {

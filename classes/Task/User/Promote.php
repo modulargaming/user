@@ -21,8 +21,8 @@
  *
  * @package    MG/User
  * @category   Task
- * @author     Modular Gaming Team
- * @copyright  (c) 2012-2013 Modular Gaming Team
- * @license    BSD http://modulargaming.com/license
+ * @author     Modular Gaming
+ * @copyright  (c) 2012-2013 Modular Gaming
+ * @license    BSD http://www.modulargaming.com/license
  */
 class Task_User_Promote extends MG_Task_User_Promote {}

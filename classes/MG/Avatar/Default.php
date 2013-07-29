@@ -4,9 +4,9 @@
  *
  * @package    MG/User
  * @category   Avatar
- * @author     Modular Gaming Team
- * @copyright  (c) 2012-2013 Modular Gaming Team
- * @license    BSD http://modulargaming.com/license
+ * @author     Modular Gaming
+ * @copyright  (c) 2012-2013 Modular Gaming
+ * @license    BSD http://www.modulargaming.com/license
  */
 class MG_Avatar_Default extends Avatar {
 

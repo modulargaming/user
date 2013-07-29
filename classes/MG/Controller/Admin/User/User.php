@@ -1,5 +1,13 @@
 <?php defined('SYSPATH') OR die('No direct script access.');
-
+/**
+ * Controller for Admin User Users
+ *
+ * @package    MG/User
+ * @category   Controller
+ * @author     Modular Gaming
+ * @copyright  (c) 2012-2013 Modular Gaming
+ * @license    BSD http://www.modulargaming.com/license
+ */
 class MG_Controller_Admin_User_User extends Controller_Admin_User {
 
 		public function action_index()

@@ -6,7 +6,7 @@ return array (
 			'enabled'     => TRUE,
 			'name'        => 'User',
 			'description' => 'Complete user managment module with login/logout, user settings, user profile.',
-			'copyright'   => '&copy; 2012–2013 Modular Gaming Team',
+			'copyright'   => '&copy; 2012–2013 Modular Gaming',
 		)
 	)
 );
