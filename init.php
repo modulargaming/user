@@ -87,7 +87,7 @@ Route::set('item.admin.avatar.index', 'admin/avatar')
 	'action'     => 'index',
 ));
 
-Route::set('user.admin.index', 'Admin/User')
+Route::set('user.admin.index', 'admin/user')
 	->defaults(array(
 	'directory'  => 'Admin',
 	'controller' => 'User',
@@ -150,31 +150,85 @@ Route::set('user.admin.user.index', 'admin/user/user')
 Route::set('user.admin.role.paginate', 'admin/user/role/paginate')
 	->defaults(array(
 	'directory'  => 'Admin/User',
-	'controller' => 'role',
+	'controller' => 'Role',
 	'action'     => 'paginate',
 ));
 Route::set('user.admin.role.retrieve', 'admin/user/role/retrieve')
 	->defaults(array(
 	'directory'  => 'Admin/User',
-	'controller' => 'role',
+	'controller' => 'Role',
 	'action'     => 'retrieve',
 ));
 Route::set('user.admin.role.delete', 'admin/user/role/remove')
 	->defaults(array(
 	'directory'  => 'Admin/User',
-	'controller' => 'role',
+	'controller' => 'Role',
 	'action'     => 'delete',
 ));
 Route::set('user.admin.role.save', 'admin/user/role/save')
 	->defaults(array(
 	'directory'  => 'Admin/User',
-	'controller' => 'role',
+	'controller' => 'Role',
 	'action'     => 'save',
 ));
 Route::set('user.admin.role.index', 'admin/user/role')
 	->defaults(array(
 	'directory'  => 'Admin/User',
-	'controller' => 'role',
+	'controller' => 'Role',
+	'action'     => 'index',
+));
+Route::set('user.admin.log.load', 'admin/user/log/load')
+	->defaults(array(
+	'directory'  => 'Admin/User',
+	'controller' => 'Log',
+	'action'     => 'log_load',
+));
+Route::set('user.admin.log.update', 'admin/user/log/update')
+	->defaults(array(
+	'directory'  => 'Admin/User',
+	'controller' => 'Log',
+	'action'     => 'log_update',
+));
+Route::set('user.admin.log.delete', 'admin/user/log/delete')
+	->defaults(array(
+	'directory'  => 'Admin/User',
+	'controller' => 'Log',
+	'action'     => 'log_delete',
+));
+Route::set('user.admin.log.index', 'admin/user/user')
+	->defaults(array(
+	'directory'  => 'Admin/User',
+	'controller' => 'Log',
+	'action'     => 'index',
+));
+Route::set('user.admin.log.paginate', 'admin/user/log/paginate')
+	->defaults(array(
+	'directory'  => 'Admin/User',
+	'controller' => 'Log',
+	'action'     => 'paginate',
+));
+Route::set('user.admin.log.retrieve', 'admin/user/log/retrieve')
+	->defaults(array(
+	'directory'  => 'Admin/User',
+	'controller' => 'Log',
+	'action'     => 'retrieve',
+));
+Route::set('user.admin.log.delete', 'admin/user/log/remove')
+	->defaults(array(
+	'directory'  => 'Admin/User',
+	'controller' => 'Log',
+	'action'     => 'delete',
+));
+Route::set('user.admin.log.save', 'admin/user/log/save')
+	->defaults(array(
+	'directory'  => 'Admin/User',
+	'controller' => 'Log',
+	'action'     => 'save',
+));
+Route::set('user.admin.log.index', 'admin/user/log')
+	->defaults(array(
+	'directory'  => 'Admin/User',
+	'controller' => 'Log',
 	'action'     => 'index',
 ));
 
