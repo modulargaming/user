@@ -219,7 +219,7 @@ Event::listen('admin.nav_list', function ()
 {
 	return array(
 		'title' => 'User',
-		'link'  => URL::site('Admin/User'),
+		'link'  => URL::site('admin/user'),
 		'icon'  => 'icon-user'
 	);
 });
