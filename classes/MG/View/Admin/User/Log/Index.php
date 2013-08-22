@@ -12,20 +12,8 @@ class MG_View_Admin_User_Log_Index extends Abstract_View_Admin {
 
 	public $title = 'Logs';
 
-	public function logs()
-	{
-		$logs = array();
-
-		foreach ($this->logs as $log)
-		{
-			$logs[] = array(
-				'id'          => $role->id,
-				'name'        => $role->name,
-				'description' => $role->description
-			);
-		}
-
-		return $logs;
-	}
-
+	/**
+	 * @var Array avatar size (height, width).
+	 */
+	public $image;
 }

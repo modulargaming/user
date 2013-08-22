@@ -189,12 +189,6 @@ Route::set('user.admin.log.update', 'admin/user/log/update')
 	'controller' => 'Log',
 	'action'     => 'log_update',
 ));
-Route::set('user.admin.log.delete', 'admin/user/log/delete')
-	->defaults(array(
-	'directory'  => 'Admin/User',
-	'controller' => 'Log',
-	'action'     => 'log_delete',
-));
 Route::set('user.admin.log.index', 'admin/user/user')
 	->defaults(array(
 	'directory'  => 'Admin/User',
@@ -212,18 +206,6 @@ Route::set('user.admin.log.retrieve', 'admin/user/log/retrieve')
 	'directory'  => 'Admin/User',
 	'controller' => 'Log',
 	'action'     => 'retrieve',
-));
-Route::set('user.admin.log.delete', 'admin/user/log/remove')
-	->defaults(array(
-	'directory'  => 'Admin/User',
-	'controller' => 'Log',
-	'action'     => 'delete',
-));
-Route::set('user.admin.log.save', 'admin/user/log/save')
-	->defaults(array(
-	'directory'  => 'Admin/User',
-	'controller' => 'Log',
-	'action'     => 'save',
 ));
 Route::set('user.admin.log.index', 'admin/user/log')
 	->defaults(array(
