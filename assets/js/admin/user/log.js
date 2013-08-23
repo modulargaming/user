@@ -6,10 +6,15 @@
  */
 
 $(document).ready(function () {
+        if ( ! $('body').hasClass('admin/user-log')) {
+                return;
+        }
+
+
 	$('#data-table').on('click', '.btn-check', function (e) {
 		e.preventDefault();
 		var id = $(this).data('id');
-		$.get('./user/log/retrieve', {id: id}, function(d){
+		$.get('./log/retrieve', {id: id}, function(d){
 			$('#modal-header').text('Viewing log #'+ d.id);
 
 			$('#log-user').html('<a href="./user/'+ d.id+'/view" target="_blank">'+ d.username+'</a>');
@@ -25,7 +30,7 @@ $(document).ready(function () {
 		});
 	});
     $('#data-table').CRUD({
-        base_url:'./user/log/',
+        base_url:'./log/',
         identifier:{data:'alias', table:2},
         upload:false,
         dataTable:{
