@@ -6,6 +6,7 @@ return array(
 			'user'  => array('link' => 'user', 'title' => 'Users', 'active' => FALSE),
 			'role'   => array('link' => 'user/role', 'title' => 'Roles', 'active' => FALSE),
 			'avatar' => array('link' => 'avatar', 'title' => 'Avatars', 'active' => FALSE),
+			'log' => array('link' => 'user/log', 'title' => 'Logs', 'active' => FALSE),
 		)
 	)
 );

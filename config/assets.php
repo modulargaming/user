@@ -19,6 +19,9 @@ return array(
 				'user.role' => array(
 					'file' => 'assets/js/admin/user/role.js'
 				),
+				'user.log' => array(
+					'file' => 'assets/js/admin/user/log.js'
+				),
 				'user.avatars' => array(
 					'file' => 'assets/js/admin/avatar.js'
 				)
