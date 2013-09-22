@@ -198,6 +198,12 @@ class MG_Model_User extends Model_Auth_User implements Model_ACL_User, Interface
 	 */
 	public function get_property($key, $default = NULL)
 	{
+		if ($default === NULL)
+		{
+			// Load the initial value from the config.
+			$config = Kohana::$config->load('user.default_properties');
+			$default = Arr::get($config, $key);
+		}
 		return Arr::get($this->cached_properties, $key, $default);
 	}
 
