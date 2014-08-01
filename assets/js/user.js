@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	// Typeahead for username.
 	$('.username-typeahead').typeahead({
-		'source': '/user/typeahead',
+		'source': config.base_url + 'user/typeahead',
 		'minLength': 3
 	});
 
